@@ -1,0 +1,10 @@
+<p id="notice"><% notice %></p>
+
+<h1>Your list of Movies</h1>
+<% movies.each do |movie| %>
+    <p><% movie.omdb_id%></p>
+    <p><% movie.title %></p>
+    <p><% movie.genre %></p>
+    <p><% movie.year %></p>
+    <p><% movie.synopsis %></p>
+    <div><% link_to 'This is no longer my favorite', movie, method: :delete, data: {confirm: 'Are you sure?'} %></div>
